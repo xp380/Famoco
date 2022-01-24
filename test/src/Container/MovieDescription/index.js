@@ -1,0 +1,8 @@
+import { connect } from "react-redux";
+import MovieDescription from "../../Components/MovieDescription";
+
+const mapStateToProps = (state) => ({
+  favoriteMovie: state.movies_liked,
+});
+
+export default connect(mapStateToProps, null)(MovieDescription);

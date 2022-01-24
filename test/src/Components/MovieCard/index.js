@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card } from "antd";
-// import MovieInformation from "../../Container/MovieInformation";
+import MovieInformation from "../../Container/MovieInformation";
 import "./MovieCard.css";
 
 const MovieCard = (lol) => {
@@ -21,11 +21,11 @@ const MovieCard = (lol) => {
         }
         onClick={() => setIsVisible(true)}
       />
-      {/* <MovieInformation
+      <MovieInformation
         visible={isVisible}
         setOpen={setIsVisible}
         movieData={movieData}
-      /> */}
+      />
     </>
   );
 };
