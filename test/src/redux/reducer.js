@@ -1,4 +1,4 @@
-import { START_MOVIES, SUCCESS_MOVIES, ERROR_MOVIES, NEW_NOTE } from "./types";
+import { START_MOVIES, SUCCESS_MOVIES, ERROR_MOVIES } from "./types";
 
 const initialState = {
   all_movies: [],
@@ -24,11 +24,6 @@ export const MovieReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-      };
-    case NEW_NOTE:
-      return {
-        ...state,
-        all_movies: [action.payload, ...state.note],
       };
     default:
       return {

@@ -1,4 +1,4 @@
-import { START_MOVIES, SUCCESS_MOVIES, ERROR_MOVIES, NEW_NOTE } from "./types";
+import { START_MOVIES, SUCCESS_MOVIES, ERROR_MOVIES } from "./types";
 
 export const startMovie = () => ({
   type: START_MOVIES,
@@ -12,9 +12,4 @@ export const successMovie = (allMovies) => ({
 export const errorMovie = (error) => ({
   type: ERROR_MOVIES,
   payload: error,
-});
-
-export const addNewNote = (note) => ({
-  type: NEW_NOTE,
-  payload: note,
 });

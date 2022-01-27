@@ -3,7 +3,7 @@ import Header from "../Header/index";
 import { Layout, Table } from "antd";
 import "./MainPage.css";
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 const MainPage = (props) => {
   const { all_movies, apiMovies } = props;
 
@@ -24,7 +24,7 @@ const MainPage = (props) => {
         <Table
           columns={columns}
           dataSource={all_movies}
-          pagination={{ pageSize: 5 }}
+          pagination={{ pageSize: 5, position: ["bottomCenter"] }}
           expandable={{
             expandedRowRender: (all_movies) => (
               <p style={{ margin: 0 }}>
@@ -34,10 +34,9 @@ const MainPage = (props) => {
               </p>
             ),
           }}
-          scroll={{ y: 240 }}
+          scroll={{ y: 340 }}
         />
       </Content>
-      <Footer className="foot"></Footer>
     </div>
   );
 };
