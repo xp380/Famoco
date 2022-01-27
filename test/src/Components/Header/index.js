@@ -3,7 +3,7 @@ import { PageHeader } from "antd";
 import "./Header.css";
 
 const Header = () => {
-  const Titre = <div className="HeadLine">MovieTable App</div>;
+  const Titre = <div className="HeadLine">Movie Table App</div>;
 
   return (
     <div className="header-ghost-wrapper">

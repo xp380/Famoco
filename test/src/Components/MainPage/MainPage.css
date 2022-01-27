@@ -1,5 +1,9 @@
 .content {
   background-color: black;
   color: white;
-  padding-bottom: 400px;
+  padding-bottom: 408px;
+}
+
+.data {
+  font-weight: bolder;
 }
