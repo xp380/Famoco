@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../Header/index";
-import { Layout, Row } from "antd";
+import { Layout, Table } from "antd";
 import "./MainPage.css";
 
 const { Content, Footer } = Layout;
@@ -12,11 +12,30 @@ const MainPage = (props) => {
     apiMovies();
   }, []);
 
+  const columns = [
+    { title: "Title", dataIndex: "original_title", key: "original_title" },
+    { title: "Date", dataIndex: "release_date", key: "release_date" },
+    { title: "Vote", dataIndex: "vote_average", key: "vote_average" },
+  ];
   return (
     <div>
       <Header />
       <Content className="content">
-        <Row gutter={15}></Row>
+        <Table
+          columns={columns}
+          dataSource={all_movies}
+          pagination={{ pageSize: 5 }}
+          expandable={{
+            expandedRowRender: (all_movies) => (
+              <p style={{ margin: 0 }}>
+                Synopsis:
+                <br />
+                <span>{all_movies.overview}</span>
+              </p>
+            ),
+          }}
+          scroll={{ y: 240 }}
+        />
       </Content>
       <Footer className="foot"></Footer>
     </div>
