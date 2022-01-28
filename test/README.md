@@ -7,6 +7,8 @@ Stack:
 - Redux-Thunk
 - ANTD
 
+API: themoviedb
+
 The mini project is online. You will find in this url: https://moviefamoco.netlify.app/
 
 To begin, Redux is a state management. There are 4 key words:
