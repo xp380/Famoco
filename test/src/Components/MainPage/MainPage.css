@@ -1,8 +1,9 @@
 .content {
   background-color: black;
   color: white;
+  padding-bottom: 408px;
 }
 
-.foot {
-  background-color: black;
+.data {
+  font-weight: bolder;
 }

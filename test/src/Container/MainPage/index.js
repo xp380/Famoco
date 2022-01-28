@@ -4,7 +4,6 @@ import { allMovies } from "../../redux/index";
 
 const mapStateToProps = (state) => ({
   all_movies: state.all_movies,
-  favorite_movies: state.movies_liked,
 });
 
 const mapDispatchToProps = (dispatch) => ({

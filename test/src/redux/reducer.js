@@ -1,11 +1,4 @@
-import {
-  START_MOVIES,
-  SUCCESS_MOVIES,
-  ERROR_MOVIES,
-  ADD_FAVORITE_MOVIES,
-  REMOVE_FAVORITE_MOVIES,
-  NEW_NOTE,
-} from "./types";
+import { START_MOVIES, SUCCESS_MOVIES, ERROR_MOVIES } from "./types";
 
 const initialState = {
   all_movies: [],
@@ -31,24 +24,6 @@ export const MovieReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-      };
-    case ADD_FAVORITE_MOVIES:
-      return {
-        ...state,
-        movies_liked: [action.payload, ...state.movies_liked],
-      };
-    case REMOVE_FAVORITE_MOVIES:
-      const filterFavorite = state.movies_liked.filter(
-        (data) => data.id !== action.payload
-      );
-      return {
-        ...state,
-        movies_liked: filterFavorite,
-      };
-    case NEW_NOTE:
-      return {
-        ...state,
-        all_movies: [action.payload, ...state.note],
       };
     default:
       return {
