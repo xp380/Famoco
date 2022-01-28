@@ -23,3 +23,7 @@ In this project, there are two kinds of components:
 
 I chose this structure. Because it is easier to debug the code.
 I chose Redux-thunk instead of Redux-Saga. Because i learnt it first.
+
+At last, the biggest advantage with redux can resolve with the props drilling.
+For this project, for the call API, I called the API since redux/index.js. Then I display the API data in the table. I also could display the API data under the Table.
+Without redux, I Would have to use props or props drilling tho display data in diferent components.
